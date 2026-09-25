@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GolfJG 골프장 홀별 파 데이터</title>
+<style>
+  body { font-family: -apple-system, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; max-width: 760px; margin: 0 auto; padding: 24px 16px; line-height: 1.7; color: #1b1b1b; }
+  h1 { font-size: 1.5rem; } h2 { font-size: 1.1rem; margin-top: 2rem; }
+  code { background: #f2f2f2; padding: 2px 6px; border-radius: 4px; }
+  @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } code { background: #222; } }
+</style>
+</head>
+<body>
+<h1>GolfJG 골프장 홀별 파 데이터</h1>
+<p>GolfJG 앱(Android·iPhone)은 라운드를 만들 때 일부 골프장의 홀별 파를 자동으로 채웁니다. 그 데이터는 OpenStreetMap에서 가져와 가공한 것으로, <strong>Open Database License(ODbL) 1.0</strong>에 따라 누구나 받아 쓸 수 있도록 여기에 공개합니다.</p>
+
+<h2>파일</h2>
+<p><a href="golf_pars_osm.json"><code>golf_pars_osm.json</code></a> — 골프장별 코스(9홀 또는 18홀)와 홀별 파</p>
+<ul>
+  <li><code>n</code>: 골프장 이름 (문화체육관광부 「전국 골프장 현황」의 이름에 맞춤)</li>
+  <li><code>osm</code>: 원본 OpenStreetMap 객체 (예: <code>way/170608708</code> → https://www.openstreetmap.org/way/170608708)</li>
+  <li><code>s</code>: 코스 목록. <code>c</code>는 코스 이름(예: 북코스, OUT 코스), <code>p</code>는 1번 홀부터의 파</li>
+</ul>
+
+<h2>출처와 라이선스</h2>
+<p>© OpenStreetMap 기여자. 원본 데이터는 <a href="https://www.openstreetmap.org/copyright">Open Database License</a>로 제공됩니다. 이 파일도 같은 <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>으로 제공합니다.</p>
+<p>가공 방법: OpenStreetMap의 <code>golf=hole</code> 홀(<code>ref</code>·<code>par</code>·<code>name</code> 태그)을 가장 가까운 <code>leisure=golf_course</code>에 묶고, 1~9번(또는 1~18번) 홀의 파가 모두 있는 코스만 남긴 뒤 문화체육관광부 골프장 이름에 맞췄습니다. 두 곳(김포SEASIDE 컨트리클럽, 블랙스톤cc)은 이름이 달라 손으로 맞췄습니다.</p>
+<p>골프장 목록(이름·주소·홀 수)은 공공데이터포털의 문화체육관광부 「전국 골프장 현황」(이용허락범위 제한 없음)을 사용합니다.</p>
+
+<h2>틀린 곳을 발견하면</h2>
+<p>OpenStreetMap에서 직접 고치면 다음 앱 업데이트 때 반영됩니다. 앱 안에서는 설정 → 코스 관리에서 파를 고칠 수 있습니다.</p>
+</body>
+</html>
