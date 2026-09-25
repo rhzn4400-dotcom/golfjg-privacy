@@ -12,8 +12,8 @@
 </style>
 </head>
 <body>
-<h1>GolfJG 골프장 홀별 파 데이터</h1>
-<p>GolfJG 앱(Android·iPhone)은 라운드를 만들 때 일부 골프장의 홀별 파를 자동으로 채웁니다. 그 데이터는 OpenStreetMap에서 가져와 가공한 것으로, <strong>Open Database License(ODbL) 1.0</strong>에 따라 누구나 받아 쓸 수 있도록 여기에 공개합니다.</p>
+<h1>GolfJG 골프장 데이터 (OpenStreetMap)</h1>
+<p>GolfJG 앱(Android·iPhone)은 라운드를 만들 때 일부 골프장의 홀별 파를 자동으로 채우고, 골프장 공식 사이트 링크를 보여 줍니다. 그 데이터는 OpenStreetMap에서 가져와 가공한 것으로, <strong>Open Database License(ODbL) 1.0</strong>에 따라 누구나 받아 쓸 수 있도록 여기에 공개합니다.</p>
 
 <h2>파일</h2>
 <p><a href="golf_pars_osm.json"><code>golf_pars_osm.json</code></a> — 골프장별 코스(9홀 또는 18홀)와 홀별 파</p>
@@ -22,6 +22,8 @@
   <li><code>osm</code>: 원본 OpenStreetMap 객체 (예: <code>way/170608708</code> → https://www.openstreetmap.org/way/170608708)</li>
   <li><code>s</code>: 코스 목록. <code>c</code>는 코스 이름(예: 북코스, OUT 코스), <code>p</code>는 1번 홀부터의 파</li>
 </ul>
+<p><a href="golf_websites_osm.json"><code>golf_websites_osm.json</code></a> — 골프장 공식 사이트 주소 (<code>n</code> 골프장 이름, <code>w</code> 주소, <code>osm</code> 원본 객체)</p>
+<p>사이트 주소는 OpenStreetMap 골프장의 <code>website</code>·<code>contact:website</code>·<code>url</code> 태그에서 가져와, 실제로 열리는지 확인한 것만 넣었습니다(2026년 9월 확인). 주소를 모르는 골프장은 앱에서 네이버 검색으로 찾습니다.</p>
 
 <h2>출처와 라이선스</h2>
 <p>© OpenStreetMap 기여자. 원본 데이터는 <a href="https://www.openstreetmap.org/copyright">Open Database License</a>로 제공됩니다. 이 파일도 같은 <a href="https://opendatacommons.org/licenses/odbl/1-0/">ODbL 1.0</a>으로 제공합니다.</p>
